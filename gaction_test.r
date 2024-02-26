@@ -116,7 +116,7 @@ get_raw_data = function(serial_number, data_points=NULL, start_date=NULL, end_da
 ##### -----  Below is the action data pull and munging
 
 
-wk <- read_csv("https://raw.githubusercontent.com/bardcesh/Stevenson-Quant-AQ/main/data/full_stevenson.csv", col_types = "cddc") 
+wk <- read_csv("https://github.com/bardcesh/Stevenson-Quant-AQ/blob/4406024d9b0cda1fa1da3c6a65eb88933adfe481/data/full_stevenson.csv", col_types = "cddc") 
 
 
 wk <- wk %>%
