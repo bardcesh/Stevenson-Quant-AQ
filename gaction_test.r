@@ -9,7 +9,7 @@ library(jsonlite)
 ## QuantAQ API:
 
 api_key = 'ALQY1DLRK62KLFI5JBV6RXGO'
-serial_number = 'MOD-PM-00042' # Specific to this monitoring device
+serial_number = 'MOD-PM-00215' # Specific to this monitoring device
 
 base_url = "https://api.quant-aq.com/device-api/v1"
 accounts_endpoint = '/account'
@@ -116,7 +116,7 @@ get_raw_data = function(serial_number, data_points=NULL, start_date=NULL, end_da
 ##### -----  Below is the action data pull and munging
 
 
-wk <- read_csv("https://raw.githubusercontent.com/bardcesh/Stevenson-Quant-AQ/main/data/full_stevenson.csv", col_types = "cddc") 
+wk <- read_csv("https://github.com/bardcesh/Mount-Saint-Mary/blob/a2f402b32d6917ea94f82d33fd1cfde4f6155ef2/data/full_newburgh.csv", col_types = "cddc") 
 
 
 wk <- wk %>%
@@ -177,4 +177,4 @@ recent_data_h <- recent_data %>%
 #print(row)
 
 # append at the end of the csv the new data
-write_csv(recent_data_h,paste0('data/full_stevenson.csv'),append = T)   
+write_csv(recent_data_h,paste0('data/full_newburgh.csv'),append = T)   
